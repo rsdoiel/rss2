@@ -35,20 +35,20 @@ type RSS2 struct {
 	Link        string `xml:"channel>link" json:"link"`
 	Description string `xml:"channel>description" json:"description"`
 	// Optional
-	PubDate  string `xml:"channel>pubDate" json:"pubDate,omitempty"`
-	ItemList []Item `xml:"channel>item" json:"item,omitempty"`
+	PubDate  string `xml:"channel>pubDate,omitempty" json:"pubDate,omitempty"`
+	ItemList []Item `xml:"channel>item,omitempty" json:"item,omitempty"`
 }
 
 type Item struct {
 	// Optional according to Dave Winer
-	Title string `xml:"title" json:"title,omitempty"`
+	Title string `xml:"title,omitempty" json:"title,omitempty"`
 	// Required
 	Link string `xml:"link" json:"link"`
 	// Optional
-	Description template.HTML `xml:"description" json:"description,omitempty"`
-	Content     template.HTML `xml:"encoded" json:"encoded,omitempty"`
-	PubDate     string        `xml:"pubDate" json:"pubDate,omitempty"`
-	Comments    string        `xml:"comments" json:"comments,omitempty"`
+	Description template.HTML `xml:"description,omitempty" json:"description,omitempty"`
+	Content     template.HTML `xml:"encoded,omitempty" json:"encoded,omitempty"`
+	PubDate     string        `xml:"pubDate,omitempty" json:"pubDate,omitempty"`
+	Comments    string        `xml:"comments,omitempty" json:"comments,omitempty"`
 }
 
 // Parse return an RSS2 document as a RSS2 structure.
