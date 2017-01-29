@@ -38,6 +38,7 @@ type RSS2 struct {
 	Language       string `xml:"channel>language,omitempty" json:"language,omitempty"`
 	Copyright      string `xml:"channel>copyright,omitempty" json:"copyright,omitempty"`
 	ManagingEditor string `xml:"channel>managingEditor,omitempty" json:"managingEditor,omitempty"`
+	WebMaster      string `xml:"channel>webMaster,omitempty" json:"webMaster,omitempty"`
 	PubDate        string `xml:"channel>pubDate,omitempty" json:"pubDate,omitempty"`
 	LastBuildDate  string `xml:"channel>lastBuildDate,omitempty" json:"lastBuildDate,omitempty"`
 	Category       string `xml:"channel>category,omitempty" json:"category,omitempty"`
